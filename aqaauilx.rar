@@ -26,7 +26,7 @@ Logo.BackgroundTransparency = 1
 Logo.BorderSizePixel = 0
 Logo.Position = UDim2.new(0.110571563, 0, 0.140705764, 0)
 Logo.Size = UDim2.new(0, 156, 0, 142)
-Logo.Image = "http://www.roblox.com/asset/?id=5320006729"
+Logo.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=193114977"
 
 LoadedInfo.Name = "LoadedInfo"
 LoadedInfo.Parent = Loader
