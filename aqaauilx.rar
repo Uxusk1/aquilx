@@ -1,0 +1,59 @@
+local AqualixLoader = Instance.new("ScreenGui")
+local Loader = Instance.new("ImageLabel")
+local Logo = Instance.new("ImageLabel")
+local LoadedInfo = Instance.new("TextLabel")
+  
+AqualixLoader.Name = "Aqualix Loader"
+AqualixLoader.Parent = game.CoreGui
+AqualixLoader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Loader.Name = "Loader"
+Loader.Parent = AqualixLoader
+Loader.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+Loader.BackgroundTransparency = 1
+Loader.BorderSizePixel = 0
+Loader.Position = UDim2.new(0.447, 0, 0.391, 0)
+Loader.Size = UDim2.new(0, 201, 0, 198)
+Loader.Image = "rbxassetid://3570695787"
+Loader.ImageColor3 = Color3.fromRGB(52, 255, 188)
+Loader.ScaleType = Enum.ScaleType.Slice
+Loader.SliceCenter = Rect.new(100, 100, 100, 100)
+
+Logo.Name = "Logo"
+Logo.Parent = Loader
+Logo.BackgroundColor3 = Color3.new(1, 1, 1)
+Logo.BackgroundTransparency = 1
+Logo.BorderSizePixel = 0
+Logo.Position = UDim2.new(0.110571563, 0, 0.140705764, 0)
+Logo.Size = UDim2.new(0, 156, 0, 142)
+Logo.Image = "http://www.roblox.com/asset/?id=5320006729"
+
+LoadedInfo.Name = "LoadedInfo"
+LoadedInfo.Parent = Loader
+LoadedInfo.BackgroundColor3 = Color3.new(0, 0.980392, 0.603922)
+LoadedInfo.BackgroundTransparency = 1
+LoadedInfo.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+LoadedInfo.BorderSizePixel = 0
+LoadedInfo.Position = UDim2.new(0, 0, 0.806516171, 0)
+LoadedInfo.Size = UDim2.new(0, 400, 0, 28)
+LoadedInfo.Font = Enum.Font.GothamBold
+LoadedInfo.Text = "Coconut Injected! Zyxel <3"
+LoadedInfo.TextColor3 = Color3.new(1.529412, 1.807843, 1.980392)
+LoadedInfo.TextScaled = true
+LoadedInfo.TextSize = 25
+LoadedInfo.TextTransparency = 1
+LoadedInfo.TextWrapped = true
+
+
+wait(1)
+game:GetService("TweenService"):Create(Loader,TweenInfo.new(.2),{SliceScale = 0.2, Size = UDim2.new(0, 400,0, 230), Position = UDim2.new(0.395, 0, 0.373, 0)}, true):Play()
+game:GetService("TweenService"):Create(Logo,TweenInfo.new(.2),{Position = UDim2.new(0.303, 0,0.141, 0)}, true):Play()
+wait((.4))
+game:GetService("TweenService"):Create(LoadedInfo,TweenInfo.new(.2),{TextTransparency = 0}, true):Play()
+wait(2)
+game:GetService("TweenService"):Create(LoadedInfo,TweenInfo.new(.2),{TextTransparency = 1}, true):Play()
+wait(.5)
+game:GetService("TweenService"):Create(Loader,TweenInfo.new(.2),{SliceScale = 1, Size = UDim2.new(0, 0, 0, 0), Position = UDim2.new(0.5,0,0.5,0)}, true):Play()
+game:GetService("TweenService"):Create(Logo,TweenInfo.new(.2),{Size = UDim2.new(0, 0, 0, 0), Position = UDim2.new(0.5,0,0.5,0)}, true):Play()
+wait(.7)
+AqualixLoader:Destroy()
